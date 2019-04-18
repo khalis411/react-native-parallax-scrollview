@@ -63,6 +63,7 @@ export default class ParallaxScrollView extends Component {
         source={backgroundSource}
         onLoadEnd={onBackgroundLoadEnd}
         onError={onBackgroundLoadError}
+        blurRadius={10}
       >
       </Animated.Image>
     );
@@ -125,7 +126,7 @@ export default class ParallaxScrollView extends Component {
         }}
       >
         {navBarTitleComponent ||
-        <Text style={{ fontSize: 18, fontWeight: '600', color: navBarTitleColor || 'white' }}>
+        <Text numberOfLines={2} style={{ fontSize: 15,fontWeight: '600', color: navBarTitleColor || 'white' }}>
           {this.props.navBarTitle || USER.name}
         </Text>}
       </Animated.View>
